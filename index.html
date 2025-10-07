@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Marcelo Heck - Automation Developer" />
+  <title>Marcelo Heck | Automation Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Estilo base ===== */
+    :root {
+      --bg: #0d1117;
+      --card-bg: #161b22;
+      --accent: #00c2ff;
+      --text: #e6edf3;
+      --text-secondary: #8b949e;
+      --border: #30363d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #00e0ff;
+    }
+
+    /* ===== Cabeçalho ===== */
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: linear-gradient(180deg, rgba(0, 194, 255, 0.1), transparent);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+
+    /* ===== Sessão principal ===== */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    /* ===== Sobre mim ===== */
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    /* ===== Cards de projeto ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 25px;
+      transition: transform 0.3s, border-color 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .card a.button {
+      display: inline-block;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #000;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .card a.button:hover {
+      background: #00e0ff;
+    }
+
+    /* ===== Tecnologias ===== */
+    .tech {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .tech img {
+      margin: 10px;
+      width: 40px;
+      opacity: 0.9;
+      transition: 0.3s;
+    }
+
+    .tech img:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    /* ===== Contato ===== */
+    .contact {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .contact a img {
+      margin: 10px;
+      height: 40px;
+      transition: 0.3s;
+    }
+
+    .contact a img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👋 Olá, eu sou o Marcelo Heck</h1>
+    <p>💻 <b>Automation Developer</b> | 🧠 Entusiasta de Automação e Integrações Inteligentes</p>
+    <p>🚀 Crio soluções que economizam tempo e aumentam produtividade.</p>
+  </header>
+
+  <section>
+    <h2>🧩 Sobre mim</h2>
+    <p class="about">
+      Sou <b>Automation Developer</b> com foco em <b>automação de processos, bots e integrações inteligentes</b>.
+      Apaixonado por criar soluções que transformam tarefas manuais em fluxos automáticos eficientes.  
+      Trabalho com <b>Python, Node.js, Power Automate e APIs REST</b>, desenvolvendo ferramentas práticas e acessíveis.
+    </p>
+  </section>
+
+  <section>
+    <h2>📂 Projetos em Destaque</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>🧾 Comparador de Extratos</h3>
+        <p>Compara automaticamente arquivos de extratos dentro de uma pasta e retorna um arquivo com as divergências destacadas em amarelo. Se não houver divergências, o retorno é vazio.</p>
+        <a class="button" href="https://github.com/marcelloheck-arch/Comparador-Extratos" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>📎 JuntaPDFs</h3>
+        <p>Script em Python que acessa uma pasta específica e junta todos os PDFs existentes em um único arquivo mesclado e pronto para download.</p>
+        <a class="button" href="https://github.com/marcelloheck-arch/JuntaPDFs" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>💰 Calculadora de Precificação</h3>
+        <p>Calcula o preço sugerido de produtos ou serviços com base na tabela do Simples Nacional, margem de lucro e impostos. Retorna lucro líquido e custo total.</p>
+        <a class="button" href="https://github.com/marcelloheck-arch/Calculadora-Precificacao" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>🎮 JogoSpa</h3>
+        <p>Ferramenta criada para facilitar o estudo e gravação de conteúdos de concursos, ENEM e vestibulares, transformando a memorização em uma atividade divertida.</p>
+        <a class="button" href="https://github.com/marcelloheck-arch/JogoSpa" target="_blank">Ver no GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="tech">
+    <h2>🛠️ Tecnologias e Ferramentas</h2>
+    <p>
+      <img src="https://skillicons.dev/icons?i=python,js,nodejs,github,vscode,git,html,css,powershell,windows" alt="Tech icons" />
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>📬 Contato</h2>
+    <a href="https://www.linkedin.com/in/marcelo-heck" target="_blank">
+      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="mailto:marcelloheck.dev@gmail.com">
+      <img src="https://img.shields.io/badge/-E--mail-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+    </a>
+  </section>
+
+  <footer>
+    ⭐ Se gostou dos meus projetos, deixe uma estrela no repositório!  
+    <br>© 2025 Marcelo Heck
+  </footer>
+
+</body>
+</html>
