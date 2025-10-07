@@ -30,16 +30,6 @@ Atualmente, desenvolvo soluções com:
 
 ---
 
-### 📂 Projetos em destaque
-
-| Projeto | Descrição | Link |
-|----------|------------|------|
-| 🧾 **Comparador de Extratos** | Automatiza a comparação de PDFs bancários e destaca divergências. | [Ver projeto](https://github.com/marcelloheck-arch/pdf-comparator) |
-| 🤖 **Bot de Envio de E-mails** | Envia relatórios automáticos com anexos e mensagens personalizadas. | [Ver projeto](https://github.com/marcelloheck-arch/bot-email) |
-| 📊 **Gerador de Relatórios Automáticos** | Gera e organiza relatórios financeiros com um clique. | [Ver projeto](https://github.com/marcelloheck-arch/report-generator) |
-
----
-
 ### 🛠️ Tecnologias e Ferramentas
 
 <p align="center">
