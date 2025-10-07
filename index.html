@@ -3,249 +3,327 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Marcelo Heck - Automation Developer" />
-  <title>Marcelo Heck | Automation Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Portfólio - Marcelo Heck | Automation Developer</title>
   <style>
-    /* ===== Estilo base ===== */
+    /* ======== VARIÁVEIS DE CORES ======== */
     :root {
-      --bg: #0d1117;
-      --card-bg: #161b22;
-      --accent: #00c2ff;
-      --text: #e6edf3;
-      --text-secondary: #8b949e;
-      --border: #30363d;
+      --bg-color: #f5f5f5;
+      --card-bg: #ffffff;
+      --accent: #4c8bf5;
+      --text: #333333;
+      --subtext: #666666;
+      --btn-hover: #3b6cd9;
+      --shadow-light: rgba(0, 0, 0, 0.08);
+      --shadow-dark: rgba(0, 0, 0, 0.15);
+      --header-height: 80px;
     }
 
+    /* ======== ESTILO GERAL ======== */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: var(--bg);
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
       color: var(--text);
       line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 {
-      color: var(--text);
+      scroll-behavior: smooth;
     }
 
     a {
-      color: var(--accent);
       text-decoration: none;
-      transition: 0.3s;
     }
 
-    a:hover {
-      color: #00e0ff;
-    }
-
-    /* ===== Cabeçalho ===== */
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background: linear-gradient(180deg, rgba(0, 194, 255, 0.1), transparent);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-    }
-
-    /* ===== Sessão principal ===== */
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-    }
-
-    /* ===== Sobre mim ===== */
-    .about {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-    }
-
-    /* ===== Cards de projeto ===== */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 25px;
-      transition: transform 0.3s, border-color 0.3s;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: var(--accent);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-      color: var(--accent);
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-    }
-
-    .card a.button {
-      display: inline-block;
-      padding: 10px 18px;
-      background: var(--accent);
-      color: #000;
-      border-radius: 8px;
-      font-weight: 600;
+    /* ======== NAV FIXO ======== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      background-color: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px var(--shadow-light);
+      z-index: 1000;
       transition: background 0.3s;
     }
 
-    .card a.button:hover {
-      background: #00e0ff;
+    nav a {
+      color: var(--accent);
+      margin: 0 20px;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    /* ===== Tecnologias ===== */
-    .tech {
+    nav a:hover {
+      color: var(--btn-hover);
+    }
+
+    /* ======== HEADER ======== */
+    header {
+      background: linear-gradient(90deg, #e0e7ff, #c7d2fe);
       text-align: center;
-      margin-top: 40px;
+      padding: 150px 20px 80px 20px; /* espaço para nav fixa */
+      transition: padding 0.3s;
     }
 
-    .tech img {
-      margin: 10px;
-      width: 40px;
-      opacity: 0.9;
-      transition: 0.3s;
+    header h1 {
+      font-size: 2.8em;
+      color: var(--accent);
+      margin-bottom: 10px;
+      transition: transform 0.3s;
     }
 
-    .tech img:hover {
+    header p {
+      color: var(--subtext);
+      font-size: 1.2em;
+    }
+
+    header:hover h1 {
+      transform: scale(1.05);
+    }
+
+    /* ======== SEÇÃO PROJETOS ======== */
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--accent);
+      font-size: 2em;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent);
+      margin: 10px auto 0 auto;
+      border-radius: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    /* ======== CARDS COM FADE-IN ======== */
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px var(--shadow-light);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .card.visible {
       opacity: 1;
-      transform: scale(1.1);
+      transform: translateY(0);
     }
 
-    /* ===== Contato ===== */
-    .contact {
-      text-align: center;
-      margin-top: 60px;
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 25px var(--shadow-dark);
     }
 
-    .contact a img {
-      margin: 10px;
-      height: 40px;
-      transition: 0.3s;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #ddd;
+      transition: transform 0.4s ease;
     }
 
-    .contact a img:hover {
-      transform: scale(1.1);
+    .card:hover img {
+      transform: scale(1.05);
     }
 
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    .card p {
+      color: var(--subtext);
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: var(--accent);
+      color: white;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--btn-hover);
+      transform: scale(1.05);
+    }
+
+    /* ======== FOOTER ======== */
     footer {
       text-align: center;
-      padding: 20px;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
+      padding: 50px 20px;
+      border-top: 1px solid #ddd;
+      color: var(--subtext);
+      font-size: 0.95em;
+      background-color: var(--bg-color);
     }
 
+    footer a {
+      color: var(--accent);
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: var(--btn-hover);
+    }
+
+    /* ======== RESPONSIVIDADE ======== */
+    @media (max-width: 768px) {
+      header {
+        padding: 130px 15px 80px 15px;
+      }
+
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      h2 {
+        font-size: 1.8em;
+      }
+
+      .card img {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 110px 10px 70px 10px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .card img {
+        height: 130px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
+  <!-- NAV FIXA -->
+  <nav>
+    <a href="#projetos">Projetos</a>
+    <a href="#footer">Contato</a>
+  </nav>
+
   <header>
-    <h1>👋 Olá, eu sou o Marcelo Heck</h1>
-    <p>💻 <b>Automation Developer</b> | 🧠 Entusiasta de Automação e Integrações Inteligentes</p>
-    <p>🚀 Crio soluções que economizam tempo e aumentam produtividade.</p>
+    <h1>Marcelo Heck</h1>
+    <p>Automation Developer | Soluções em Python e Automação de Tarefas</p>
   </header>
 
-  <section>
-    <h2>🧩 Sobre mim</h2>
-    <p class="about">
-      Sou <b>Automation Developer</b> com foco em <b>automação de processos, bots e integrações inteligentes</b>.
-      Apaixonado por criar soluções que transformam tarefas manuais em fluxos automáticos eficientes.  
-      Trabalho com <b>Python, Node.js, Power Automate e APIs REST</b>, desenvolvendo ferramentas práticas e acessíveis.
-    </p>
-  </section>
-
-  <section>
-    <h2>📂 Projetos em Destaque</h2>
-
-    <div class="projects">
-
+  <section id="projetos">
+    <h2>Projetos em Destaque</h2>
+    <div class="grid">
+      <!-- Projeto 1 -->
       <div class="card">
-        <h3>🧾 Comparador de Extratos</h3>
-        <p>Compara automaticamente arquivos de extratos dentro de uma pasta e retorna um arquivo com as divergências destacadas em amarelo. Se não houver divergências, o retorno é vazio.</p>
-        <a class="button" href="https://github.com/marcelloheck-arch/Comparador-Extratos" target="_blank">Ver no GitHub</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png" alt="Conciliador de Extratos">
+        <div class="card-content">
+          <h3>Conciliador de Extratos</h3>
+          <p>Ferramenta em Python para comparação automática de extratos bancários, destacando divergências de forma inteligente.</p>
+          <a href="https://github.com/marcelloheck-arch/Conciliacao" target="_blank" class="btn">Ver no GitHub</a>
+        </div>
       </div>
 
+      <!-- Projeto 2 -->
       <div class="card">
-        <h3>📎 JuntaPDFs</h3>
-        <p>Script em Python que acessa uma pasta específica e junta todos os PDFs existentes em um único arquivo mesclado e pronto para download.</p>
-        <a class="button" href="https://github.com/marcelloheck-arch/JuntaPDFs" target="_blank">Ver no GitHub</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991112.png" alt="Junta PDF">
+        <div class="card-content">
+          <h3>Junta PDF</h3>
+          <p>Aplicação prática que permite unir vários arquivos PDF em um único documento de forma simples e rápida.</p>
+          <a href="https://github.com/marcelloheck-arch/JuntaPdf" target="_blank" class="btn">Ver no GitHub</a>
+        </div>
       </div>
 
+      <!-- Projeto 3 -->
       <div class="card">
-        <h3>💰 Calculadora de Precificação</h3>
-        <p>Calcula o preço sugerido de produtos ou serviços com base na tabela do Simples Nacional, margem de lucro e impostos. Retorna lucro líquido e custo total.</p>
-        <a class="button" href="https://github.com/marcelloheck-arch/Calculadora-Precificacao" target="_blank">Ver no GitHub</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Jogo Spa">
+        <div class="card-content">
+          <h3>Jogo Spa</h3>
+          <p>Mini game desenvolvido em Python para fins educativos e de entretenimento, usando lógica e design intuitivo.</p>
+          <a href="https://github.com/marcelloheck-arch/JogoSpa" target="_blank" class="btn">Ver no GitHub</a>
+        </div>
       </div>
 
+      <!-- Projeto 4 -->
       <div class="card">
-        <h3>🎮 JogoSpa</h3>
-        <p>Ferramenta criada para facilitar o estudo e gravação de conteúdos de concursos, ENEM e vestibulares, transformando a memorização em uma atividade divertida.</p>
-        <a class="button" href="https://github.com/marcelloheck-arch/JogoSpa" target="_blank">Ver no GitHub</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" alt="Calculadora Python">
+        <div class="card-content">
+          <h3>Calculadora</h3>
+          <p>Projeto em Python que implementa uma calculadora funcional com interface simples e fácil de usar.</p>
+          <a href="https://github.com/marcelloheck-arch/calculadora" target="_blank" class="btn">Ver no GitHub</a>
+        </div>
       </div>
-
     </div>
   </section>
 
-  <section class="tech">
-    <h2>🛠️ Tecnologias e Ferramentas</h2>
-    <p>
-      <img src="https://skillicons.dev/icons?i=python,js,nodejs,github,vscode,git,html,css,powershell,windows" alt="Tech icons" />
-    </p>
-  </section>
-
-  <section class="contact">
-    <h2>📬 Contato</h2>
-    <a href="https://www.linkedin.com/in/marcelo-heck" target="_blank">
-      <img src="https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white" alt="LinkedIn">
-    </a>
-    <a href="mailto:marcelloheck.dev@gmail.com">
-      <img src="https://img.shields.io/badge/-E--mail-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-    </a>
-  </section>
-
-  <footer>
-    ⭐ Se gostou dos meus projetos, deixe uma estrela no repositório!  
-    <br>© 2025 Marcelo Heck
+  <footer id="footer">
+    © 2025 Marcelo Heck | <a href="https://github.com/marcelloheck-arch" target="_blank">GitHub</a> · 
+    <a href="https://www.linkedin.com/in/marcelo-heck" target="_blank">LinkedIn</a>
   </footer>
 
+  <script>
+    // FADE-IN DOS CARDS AO SCROLL
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
+
